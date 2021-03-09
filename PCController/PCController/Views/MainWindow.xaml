@@ -1,0 +1,36 @@
+﻿<Window
+    x:Class="PCController.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="clr-namespace:PCController.Core;assembly=PCController.Core"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    Title="{Binding Title}"
+    Width="900"
+    Height="1200"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    ui:WindowHelper.UseModernWindowStyle="True">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ContentControl
+            Grid.Row="0"
+            Grid.Column="0"
+            prism:RegionManager.RegionName="{x:Static core:RegionNames.NavigationRegion}" />
+
+
+        <ContentControl
+            Grid.Row="1"
+            Grid.Column="0"
+            prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
+
+    </Grid>
+</Window>

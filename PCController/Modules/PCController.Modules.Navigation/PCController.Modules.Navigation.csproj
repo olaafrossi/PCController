@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>PCController.Modules.Navigation</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+    <PackageReference Include="ModernWpfUI" Version="0.9.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PCController.Core\PCController.Core.csproj" />
+    <ProjectReference Include="..\..\Services\PCController.Services.Interfaces\PCController.Services.Interfaces.csproj" />
+  </ItemGroup>
+</Project>
